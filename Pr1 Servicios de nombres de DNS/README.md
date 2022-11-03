@@ -23,16 +23,34 @@ sudo apt-get install dnsutils
 </code></pre>
 
 # Configurar bind
-Hay que editar el fichero `/etc/bind/named.conf.local` y añadir al final de éste:
+Hay que editar el fichero `/etc/bind/named.conf.local` con sudo nano y añadir al final de éste:
 <pre><code>zone "stucomx.net" {
-        type master;
-        file "/etc/bind/db.stucomx.net";
-        }
+    type master;
+    file "/etc/bind/db.stucomx.net";
+};
 </code></pre>
 
 Ahora copiamos el fichero con: 
 
-`cp /etc/bind/db.empty /etc/bind/db.stucomx.net`
+`sudo cp /etc/bind/db.empty /etc/bind/db.stucomx.net`
 
-Y lo tenemos que editar con:
-<pre><code>nano /etc/bind/db.stucomx.net</code></pre>
+Lo tenemos que editar con:
+<pre><code>sudo nano /etc/bind/db.stucomx.net</code></pre>
+Y añadir lo siguiente:\
+@   IN  NS  localhost.                \
+server IN  A                          \
+www IN  CNMAE   dns                   \
+printer IN  A   192.168.141.13        \
+pc42    IN  A   192.168.1.42          \
+pc43    IN  A   192.168.1.43          \
+pc44    IN  A   192.168.1.44          \
+pc45    IN  A   192.168.1.45          \
+pc46    IN  A   192.168.1.46          \
+pc47    IN  A   192.168.1.47          \
+pc48    IN  A   192.168.1.48          \
+pc49    IN  A   192.168.1.49          \
+pc50    IN  A   192.168.1.50          
+
+Por último tenemos que aplicar los cambios:
+<pre><code>sudo systemctl  restart bind9
+sudo systemctl  status bind9</code></pre>

@@ -39,7 +39,7 @@ Lo tenemos que editar con:
 Y añadir lo siguiente:\
 @   IN  NS  localhost.                \
 server IN  A                          \
-www IN  CNMAE   dns                   \
+www IN  CNMAE   server                \
 printer IN  A   192.168.141.13        \
 pc42    IN  A   192.168.1.42          \
 pc43    IN  A   192.168.1.43          \

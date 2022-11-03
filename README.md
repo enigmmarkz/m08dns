@@ -10,11 +10,11 @@ Hay que editar el fichero `/etc/bind/named.conf.local` y añadir al final de és
         type master;
         file "/etc/bind/db.stucomx.net";
         }
-<code></pre>
+</code></pre>
 
 Ahora copiamos el fichero con: 
 
 `cp /etc/bind/db.empty /etc/bind/db.stucomx.net`
 
 Y lo tenemos que editar con:
-<pre><code>nano /etc/bind/db.stucomx.net<code></pre>
+<pre><code>nano /etc/bind/db.stucomx.net</code></pre>

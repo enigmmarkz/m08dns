@@ -41,7 +41,7 @@ Y añadir lo siguiente:\
 server  IN  A  192.168.1.1            \
 www     IN  CNAME   server            \
 ns      IN  CNAME   server            \
-printer IN  A   192.168.141.49        \
+printer IN  A   192.168.1.200         \
 pc42    IN  A   192.168.1.42          \
 pc43    IN  A   192.168.1.43          \
 pc44    IN  A   192.168.1.44          \

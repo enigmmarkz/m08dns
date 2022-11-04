@@ -37,10 +37,11 @@ Ahora copiamos el fichero con:
 Lo tenemos que editar con:
 <pre><code>sudo nano /etc/bind/db.stucomx.net</code></pre>
 Y añadir lo siguiente:\
-@   IN  NS  localhost.                \
-server IN  A                          \
-www IN  CNMAE   server                \
-printer IN  A   192.168.141.13        \
+@   IN  NS      localhost.            \
+server  IN  A  192.168.1.1            \
+www     IN  CNAME   server            \
+ns      IN  CNAME   server            \
+printer IN  A   192.168.141.49        \
 pc42    IN  A   192.168.1.42          \
 pc43    IN  A   192.168.1.43          \
 pc44    IN  A   192.168.1.44          \

@@ -55,3 +55,4 @@ pc50    IN  A   192.168.1.50
 Por último tenemos que aplicar los cambios:
 <pre><code>sudo systemctl  restart bind9
 sudo systemctl  status bind9</code></pre>
+

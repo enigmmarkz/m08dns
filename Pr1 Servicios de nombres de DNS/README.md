@@ -37,7 +37,7 @@ Ahora copiamos el fichero con:
 Lo tenemos que editar con:
 <pre><code>sudo nano /etc/bind/db.stucomx.net</code></pre>
 Y añadir lo siguiente:\
-@   IN  NS      localhost.            \
+@       IN  NS      localhost.        \
 server  IN  A  192.168.1.1            \
 www     IN  CNAME   server            \
 ns      IN  CNAME   server            \
